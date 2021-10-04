@@ -1,0 +1,21 @@
+C:\Documents and Settings\MP\My Documents\Active Projects\EarlySense\Sensor Scope\Sensor Scope\bin\Release\Sensor Scope.exe.config
+C:\Documents and Settings\MP\My Documents\Active Projects\EarlySense\Sensor Scope\Sensor Scope\obj\Release\Sensor Scope.exe
+C:\Documents and Settings\MP\My Documents\Active Projects\EarlySense\Sensor Scope\Sensor Scope\obj\Release\Sensor Scope.pdb
+C:\Documents and Settings\MP\My Documents\Active Projects\EarlySense\Sensor Scope\Sensor Scope\bin\Release\Sensor Scope.exe
+C:\Documents and Settings\MP\My Documents\Active Projects\EarlySense\Sensor Scope\Sensor Scope\bin\Release\Sensor Scope.pdb
+C:\Documents and Settings\MP\My Documents\Active Projects\EarlySense\Sensor Scope\Sensor Scope\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\MP\My Documents\Active Projects\EarlySense\Sensor Scope\Sensor Scope\obj\Release\Sensor_Scope.FRMMain.resources
+C:\Documents and Settings\MP\My Documents\Active Projects\EarlySense\Sensor Scope\Sensor Scope\obj\Release\Sensor_Scope.Properties.Resources.resources
+C:\Documents and Settings\MP\My Documents\Active Projects\EarlySense\Sensor Scope\Sensor Scope\obj\Release\Sensor Scope.csproj.GenerateResource.Cache
+C:\Documents and Settings\MP\My Documents\Active Projects\EarlySense\Sensor Scope 1 channel\Sensor Scope\bin\Release\Sensor Scope.exe.config
+C:\Documents and Settings\MP\My Documents\Active Projects\EarlySense\Sensor Scope 1 channel\Sensor Scope\obj\Release\Sensor Scope.pdb
+C:\Documents and Settings\MP\My Documents\Active Projects\EarlySense\Sensor Scope 1 channel\Sensor Scope\bin\Release\Sensor Scope.exe
+C:\Documents and Settings\MP\My Documents\Active Projects\EarlySense\Sensor Scope 1 channel\Sensor Scope\bin\Release\Sensor Scope.pdb
+C:\Documents and Settings\MP\My Documents\Active Projects\EarlySense\Sensor Scope 1 channel\Sensor Scope\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\MP\My Documents\Active Projects\EarlySense\Sensor Scope 1 channel\Sensor Scope\obj\Release\Sensor_Scope.FRMMain.resources
+C:\Documents and Settings\MP\My Documents\Active Projects\EarlySense\Sensor Scope 1 channel\Sensor Scope\obj\Release\Sensor_Scope.Properties.Resources.resources
+C:\Documents and Settings\MP\My Documents\Active Projects\EarlySense\Sensor Scope 1 channel\Sensor Scope\obj\Release\Sensor Scope.csproj.GenerateResource.Cache
+C:\Documents and Settings\MP\My Documents\Active Projects\EarlySense\Sensor Scope 1 channel\Sensor Scope\obj\Release\Sensor Scope.exe
+C:\Documents and Settings\MP\My Documents\Active Projects\EarlySense\Sensor scope\Sensor Scope 1 channel\Sensor Scope\bin\Release\Sensor Scope.exe.config
+C:\Documents and Settings\MP\My Documents\Active Projects\EarlySense\Sensor scope\Sensor Scope 1 channel\Sensor Scope\obj\Release\Sensor Scope.exe
+C:\Documents and Settings\MP\My Documents\Active Projects\EarlySense\Sensor scope\Sensor Scope 1 channel\Sensor Scope\obj\Release\Sensor Scope.pdb

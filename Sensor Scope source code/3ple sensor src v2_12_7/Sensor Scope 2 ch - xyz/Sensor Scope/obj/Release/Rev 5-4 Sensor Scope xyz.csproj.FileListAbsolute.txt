@@ -1,0 +1,10 @@
+C:\Users\mp\Documents\Active Projects\EarlySense\Sensor scope\Sensor Scope 2 ch - xyz\Sensor Scope\obj\Release\ResolveAssemblyReference.cache
+C:\Users\mp\Documents\Active Projects\EarlySense\Sensor scope\Sensor Scope 2 ch - xyz\Sensor Scope\obj\Release\Sensor_Scope.FRMMain.resources
+C:\Users\mp\Documents\Active Projects\EarlySense\Sensor scope\Sensor Scope 2 ch - xyz\Sensor Scope\obj\Release\Sensor_Scope.Properties.Resources.resources
+C:\Users\mp\Documents\Active Projects\EarlySense\Sensor scope\Sensor Scope 2 ch - xyz\Sensor Scope\obj\Release\GenerateResource-ResGen.read.1.tlog
+C:\Users\mp\Documents\Active Projects\EarlySense\Sensor scope\Sensor Scope 2 ch - xyz\Sensor Scope\obj\Release\GenerateResource-ResGen.write.1.tlog
+C:\Users\mp\Documents\Active Projects\EarlySense\Sensor scope\Sensor Scope 2 ch - xyz\Sensor Scope\bin\Release\rev5-4 Sensor Scope XYZ.exe.config
+C:\Users\mp\Documents\Active Projects\EarlySense\Sensor scope\Sensor Scope 2 ch - xyz\Sensor Scope\bin\Release\rev5-4 Sensor Scope XYZ.exe
+C:\Users\mp\Documents\Active Projects\EarlySense\Sensor scope\Sensor Scope 2 ch - xyz\Sensor Scope\bin\Release\rev5-4 Sensor Scope XYZ.pdb
+C:\Users\mp\Documents\Active Projects\EarlySense\Sensor scope\Sensor Scope 2 ch - xyz\Sensor Scope\obj\Release\rev5-4 Sensor Scope XYZ.exe
+C:\Users\mp\Documents\Active Projects\EarlySense\Sensor scope\Sensor Scope 2 ch - xyz\Sensor Scope\obj\Release\rev5-4 Sensor Scope XYZ.pdb

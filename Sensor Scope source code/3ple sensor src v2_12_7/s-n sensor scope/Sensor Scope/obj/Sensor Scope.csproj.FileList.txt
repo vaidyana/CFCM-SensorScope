@@ -1,0 +1,18 @@
+bin\Debug\Sensor Scope.exe
+bin\Debug\Sensor Scope.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\Sensor_Scope.Properties.Resources.resources
+obj\Debug\Sensor Scope.csproj.GenerateResource.Cache
+obj\Debug\Sensor Scope.exe
+obj\Debug\Sensor Scope.pdb
+obj\Debug\Sensor_Scope.FRMMain.resources
+bin\Debug\Sensor Scope.exe.config
+bin\Release\Sensor Scope.exe.config
+bin\Release\Sensor Scope.exe
+bin\Release\Sensor Scope.pdb
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\Sensor_Scope.FRMMain.resources
+obj\Release\Sensor_Scope.Properties.Resources.resources
+obj\Release\Sensor Scope.csproj.GenerateResource.Cache
+obj\Release\Sensor Scope.exe
+obj\Release\Sensor Scope.pdb

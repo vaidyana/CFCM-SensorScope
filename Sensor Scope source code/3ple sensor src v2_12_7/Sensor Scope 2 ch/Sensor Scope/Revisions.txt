@@ -1,0 +1,33 @@
+SensorScope versions
+====================
+V01-12 - 22/07/2008
+===================
+ 1- Communication buttons will be disabled only when there's no comm (regardless of graph data).
+ 2- Splitted WDT to WDT and reset WDT.
+
+
+V01-11 - 28/05/2008
+===================
+- VErsioning changes
+
+V01-10 - 28/05/2008
+===================
+- Working with versions without ram/eeprom commands will mask the relevant area on screen.
+
+V01-09 - 26/05/2008
+===================
+- Changed setup so it will update previous versions.
+
+V01-06 - 10/04/2008
+===================
+- Till now, we had only a graph painter with some statistics.
+  On this version, I've added the following features:
+  - Download software.
+  - Watchdog timer.
+  - Software checksum.
+  - Serial number programing.
+- Changed the position of some gui elements (com selector, open/close port etc.).
+- When loading the software - it won't check for the existance of the default port.
+  The enumeration will reset when port combbbox arrow is cliked.
+  
+  

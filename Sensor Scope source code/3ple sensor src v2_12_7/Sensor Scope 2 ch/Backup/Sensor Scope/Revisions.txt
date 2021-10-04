@@ -1,0 +1,18 @@
+SensorScope versions
+====================
+V01-09 - 26/05/2008
+===================
+- Changed setup so it will update previous versions.
+V01-06 - 10/04/2008
+===================
+- Till now, we had only a graph painter with some statistics.
+  On this version, I've added the following features:
+  - Download software.
+  - Watchdog timer.
+  - Software checksum.
+  - Serial number programing.
+- Changed the position of some gui elements (com selector, open/close port etc.).
+- When loading the software - it won't check for the existance of the default port.
+  The enumeration will reset when port combbbox arrow is cliked.
+  
+  

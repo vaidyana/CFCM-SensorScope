@@ -1,0 +1,260 @@
+;Date,Pc version,driver version,controller version,,,,,,,,,,,,
+;9/7/2012,0.09,0.90.22,0.00.00,,,,,,,,,,,,
+;Instructions for entering description records for the log analyzer:,,,,,,,,,,,,,,,
+;Log analyzer descriptions are to be written on column O. Column P must contain an *.,,,,,,,,,,,,,,,
+; The structure of a descriptor field is : type;code1;translte1;code2;translate2…,,,,,,,,,,,,,,,
+; Don't use commas please since this is a csv file…,,,,,,,,,,,,,,,
+; Available codes and samples:,,,,,,,,,,,,,,,
+;  S - String     ,S;0;Inactive;1;Activated,,,,,,,,,,,,,,
+; N - Show value\string only,N,(for example : Session terminated by driver.),,,,,,,,,,,,,
+; ,N;0;Session termainated by command;1;Session started,(will only show the relevant string without the code).,,,,,,,,,,,,,
+; B - Bitmap values.,"B;0;Parameter check-sum error;1;Stimulation voltage limiter jumper not in place;2;Stimulation voltage limiter error;3;DC to DC converter - fall rate (discharge) error;4;DC to DC converter - rise rate error;5;Pulse level measurment error;6;Stimulation voltage tracking error;7;Register corruption;8;Blue-tooth not responding;9;Battery voltage is out of range;10;Supply voltage is out of range;11;Pulse width limiter error;12;32.768Khz osc. error;13;6.78Mhz osc. error;14;Transmitter was disconnected during BIT;15;BIT request during pulsing activity, or while charger connected and jumper was on
+",,,,,,,,,,,,,,
+; C - Char (translate to ascii value),C,,,,,,,,,,,,,,
+;,,,,,,,,,,,,,,,
+; Page structure is : *p,Name,start address(hex),length (hex),requested interval(ms),Use page on ipaq,Page signature,,,,,,,,,
+*p,Operating system memory,0x2000,0x10,1000,1,101,*,,,,,,,,
+*p,Fast Refresh RAM,0x2010,0x10,200,1,103,*,,,,,,,,
+*p,Slow refresh RAM,0x2020,0x80,1000,1,104,*,,,,,,,,
+*p,Slow refresh EEPROM,0x1000,0x80,1000,1,105,*,,,,,,,,
+*p,Boot loader,0x20A0,0x07,1000,1,106,*,,,,,,,,
+*p,Blue tooth0x20B0,0x20B0,0x31,2000,1,107,*,,,,,,,,
+;,,,,,,,,,,,,,,,
+;Download parameters,,,,,,,,,,,,,,,*
+Donload Mode,0x20A0,1,1,,B,0,255,RW,1,,,,,,*
+Page checksum,0x20A1,1,1,,B,0,255,RW,4,,,,,,*
+Page pos checksum,0x20A2,1,1,,B,0,255,RW,,,,,,,*
+Page LSB,0x20A3,1,1,,B,0,255,RW,3,,,,,,*
+Page MSB,0x20A4,1,1,,B,0,255,RW,2,,,,,,*
+OS_software_checksum,0x20A5,1,1,,B,0,255,RW,,,,,,,*
+,,,,,,,,,,,,,,,
+;,,,,,,,,,,,,,,,
+; Label, Address, Length, Divider, Format, Type, Min, Max, Access,Parameter Code,tooltip,Display on pc,Show in tab# for lab user,Show in CRO tab ?,Remarks for log analyzer,*
+;      ,        ,       ,        ,       ,B/S/T/A/D/L,    ,    , R / RW,,,,,,,*
+;,,,,,,,,,,,,,,,
+;,,,,,,,,,,,,,,,
+/_Session control,,,,,,,,,,,1,,,,*
+Mode,0x2020,1,1,,B,0,3,RW,5,0=Idle 1=Session 2=Lab test 3=Positioning,1,1,,S;0;Idle;1;Session;2;Lab test;3,*
+Num. of cycles,0x106D,1,1,,B,1,255,RW,55,Range is 1 to 255,1,1,,,*
+Session time,0x2082,3,1,,T,0,65535,R,,Actual session time,1,1,,,*
+Manual pause,0x2085,1,1,,B,0,1,RW,,0=Normal  1=Pause,1,1,,,*
+Basic on time,0x1002,2,1,*0sec,B,1,3600,RW,,Range is 1 to 3600 seconds,1,1,,,*
+Basic cycle time,0x1004,2,1,*0sec,B,1,3600,RW,,Range is 1 to 3600 seconds,1,1,,,*
+,,,,,,,,,,,1,,,,*
+/_Automatic Session,,,,,,,,,,,1,,,,*
+Days for auto ssn.,0x2062,1,1,,B,0,100,RW,,Range 0 to 100 This parameter is normally decremented by 1 at midnight,1,2,,,*
+Sunday start,0x1059,1,1,,B,0,99,RW,,Start hour range 0 to 23    99=Disabled,1,2,,,*
+Munday start,0x105A,1,1,,B,0,99,RW,,Start hour range 0 to 23    99=Disabled,1,2,,,*
+Tuesday start,0x105B,1,1,,B,0,99,RW,,Start hour range 0 to 23    99=Disabled,1,2,,,*
+Wednesday start,0x105C,1,1,,B,0,99,RW,,Start hour range 0 to 23    99=Disabled,1,2,,,*
+Thursday start,0x105D,1,1,,B,0,99,RW,,Start hour range 0 to 23    99=Disabled,1,2,,,*
+Friday start,0x105E,1,1,,B,0,99,RW,,Start hour range 0 to 23    99=Disabled,1,2,,,*
+Saturday start,0x105F,1,1,,B,0,99,RW,,Start hour range 0 to 23    99=Disabled,1,2,,,*
+,,,,,,,,,,,1,,,,*
+/_Session status,,,,,,,,,,,1,,,,*
+Session timer,0x2021,3,1,,T,0,65535,R,6,,1,2,,,*
+Basic timer,0x2024,2,1,*0sec,B,0,65535,R,,,1,2,,,*
+Transmitter active,0x2028,1,1,,B,0,255,R,60,0=Inactive 1=Active,1,2,,S;0;Inactive;1;Active,*
+Dose Meter,0x2096,2,1,*0sec,B,0,65535,RW,,Accomulated stimulation time with correct feedback,1,1,,,*
+,,,,,,,,,,,1,,,,*
+/N,,,,,,,,,,,1,,,,*
+/_System,,,,,,,,,,,1,,,,*
+Software version,0x2029,2,10000,*0.0000,B,0,65535,R,13,,1,3,,,*
+Software cksm,0x202B,1,1,,B,0,255,R,,,1,3,,,*
+Board S.N.,0x100A,2,1,,B,0,65535,RW,,,1,3,,,*
+Left (0) Right (1),0x1061,1,1,,B,0,1,RW,,,1,3,,,*
+Internal clock,0x2086,3,1,,T,0,255,RW,7,,1,3,,,*
+Internal date,0x208A,3,1,,D,0,255,RW,8,,1,3,,,*
+Day in Week,0x2089,1,1,,B,0,255,R,,,1,3,,,*
+Supply voltage,0x2032,2,1000,*0.000V,B,0,65535,R,,,1,3,,,*
+Supply status,0x2034,1,1,,B,0,255,R,21,0=none 1=Under voltage 2=Plugged 3=Over-voltage,1,3,,S;0;none;1;Under voltage;2;Plugged;3;Over-voltage error,*
+Supply CRG/USB,0x2035,1,1,,B,0,255,R,,0=Charger 1=USB,1,3,,S;0;none;1;Under voltage;2;Plugged;3;Over-voltage error,*
+Battery voltage,0x2036,2,1000,*0.000V,B,0,65535,R,35,,1,3,,,*
+Battery status,0x2038,1,1,,B,0,255,R,17,0=Shutdown 1=No bars 2=one bar 3=two bars 4=three bars,1,3,,S;0;Shutdown;1;Very low;2;Low;3;Sufficient to start session;4;full;5;Over voltage error,*
+Charger current,0x2039,2,10,*000.0mA,B,0,65535,R,,Current consumption from charger,1,3,,,*
+Charging status,0x203B,1,1,,B,0,255,R,26,0=No Charging 1=In charing 2=Completed,1,3,,,*
+Parameters ck-sum,0x203C,1,1,,B,0,255,R,,Updated for every parameter change,1,3,,,*
+Calculated ck-sum,0x203D,1,1,,B,0,255,R,,Updated regularly,1,3,,,*
+Reg. corruption,0x203E,1,1,,B,0,255,R,,32=OK,1,3,,,*
+Error code,0x203F,1,1,,B,0,255,RW,15,See error code table,1,3,,S;0;No error;1;Session ended with no errors;10;Coupling test terminated since stop key pressed;11;Coupling test terminated since charger connected;12;Coupling test terminated since transmitter disconnection;13;Coupling test terminated since charger over voltage;14;Coupling test terminated since battery over voltage;15;Coupling test terminated since RTC error;16;Coupling test terminated since software check-sum error;17;Coupling test terminated since parameter check-sum error;18;Coupling test terminated since voltage tracking error;19;Coupling test terminated since RF oscillator error;20;Coupling test terminated since coupling dose expired;21;Coupling test terminated since coupling time expired;22;Coupling test terminated since battery low (1 bars or less);23;Coupling test terminated since communication command;30;Session terminated since stop key pressed;31;Session terminated since charger connected (>15sec);32;Session terminated since transmitter disconnection;33;Session terminated since charger over voltage;34;Session terminated since battery over voltage;35;Session terminated since RTC error;36;Session terminated since software check-sum error;37;Session terminated since parameter check-sum error;38;Session terminated since voltage tracking error;39;Session terminated since RF oscillator error;40;Last session was interrupted since battery low;41;Last session was interrupted since switched-off;42;Session terminated since communication command,*
+Error bits,0x2040,2,1,,B,0,65535,R,16,See error bit table,1,3,,B;0;Charger over voltage error;1;RTC error;2;Software check-sum error;3;Parameters check-sum error;4;Charger connected during session;5;Transmitter disconnected;6;Battery over voltage error;7;Low battery;8;No feedback detection;9;Transmitter short-circuited,*
+Buzzer volume,0x1062,1,1,*0\%,B,0,100,RW,,Range 0 to 100  0=lowest 100=loudest,1,3,,,*
+Center finder vol.,0x1069,1,1,*0\%,B,0,100,RW,,Range 0 to 100  0=lowest 100=loudest,1,3,,Beep volume during center finding,*
+Load defaults,0x2042,1,1,,B,0,1,RW,,Set to 1 to load defaults,1,3,,S;0;Inactivated;1;Activate,*
+,,,,,,,,,,,1,,,,*
+/_Log status,,,,,,,,,,,1,,,,*
+Events,0x1070,2,1,,B,0,65535,R,18,,1,4,,,*
+Session in log,0x1072,1,1,,B,0,255,R,68,1 = There is a session data log in the drivers memory,1,4,,,*
+Log size,0x2044,2,0.0039625,*00.000 KB,B,0,65535,R,22,,1,4,,,*
+Log. mem. usage,0x2046,1,1,*0\%,B,0,255,R,,,1,4,,,*
+Log. mem. expired,0x2047,1,1,,B,0,255,R,,1=Expired,1,4,,S;0; ;1; ,*
+Erase log,0x2061,1,1,,B,0,1,RW,,Set to 1 to erase log.,1,4,,S;0; ;1; ,*
+/N,,,,,,,,,,,1,,,,*
+/_Pulse control,,,,,,,,,,,1,,,,*
+Ring (0) Cuff (1),0x1063,1,1,,B,0,1,RW,,0=Ring  1=Cuff   This parameter is use during session,1,5,,,*
+Pulse frequency,0x100C,2,10,*0.0Hz,B,0,100,RW,,Pulse frequency. Range 0.1Hz - 100Hz,1,5,,,*
+Pulse delay,0x106B,1,1,*0us,B,1,255,RW,,Pulse delay time before switched to electrodes,1,5,,,*
+Pulse width set,0x100E,2,1,*0us,B,1,1200,RW,,Pulse width in usec. Range 1-1200,1,5,,,*
+Width correction,0x207D,1,1,,B,0,1,RW,,Set to 1 to enable  pulse width currection for low current levels,1,5,,,*
+Pulse measurement,0x207E,1,1,,B,0,1,RW,,0=Start (peak) pulse measurement 1=Center pulse measurement. ,1,5,,,*
+Duty compensation,0x207F,1,1,,B,0,1,RW,,Set to 1 to compensate pulse duty cycle effect on DC current level,1,5,,,*
+Dynamic BtB time B,0x2092,1,1,,B,0,1,RW,,Set to 1 to enable extend of bit t bit time B for low current levels,1,5,,,*
+Close loop enable,0x204B,1,1,,B,0,1,RW,,1=Enable close loop current regulation,1,5,,,*
+Dummy pulse en.,0x202D,1,1,,B,0,1,RW,,For close loop only. Enable dummy pulses for more accurate pulse on electrodes during phisical movements.,1,5,,,*
+Adjustment speed,0x202E,1,1,,B,1,100,RW,,100% max speed. For close loop only. Current adjustment speed.,1,5,,,*
+CE voltage set,0x2049,2,1000,*00.000V,B,0,14,RW,,Class E voltage level. Range 0.4V - 14.0V,1,5,,,*
+Elec. current set,0x204C,2,50,*0.000mA,B,0,5,RW,34,Electrode current set,1,5,,,*
+Elec. Analysis req.,0x2081,1,1,,B,0,2,RW,,0=None 1=Broken electrode check 2=Impedance measurement,1,5,,,*
+,,,,,,,,,,,1,,,,*
+/_Pulse status,,,,,,,,,,,1,,,,*
+Pulse cycle time,0x205B,2,1,*0ms,B,0,65535,R,,Pulse cycle time in msec.,1,6,,,*
+Pulse width mon.,0x204E,2,1,*0us,B,0,65535,R,31,Pulse width during auto regulation,1,6,,,*
+CE voltage mon.,0x2050,2,1000,*00.000V,B,0,65535,R,37,Class E voltage level monitor,1,6,,,*
+CE voltage drop,0x2077,2,1000,*00.000V,B,0,65535,R,,Class E voltage drop after pulse transmission,1,6,,,*
+CE DC current,0x2079,2,1000,*00.000Adc,B,0,65535,R,,Class E DC current consumption during pulse time,1,6,,,*
+DC-DC busy,0x207B,2,10,*000.0\%,B,0,65535,R,,DC-DC busy time within the pulse cycle time,1,6,,,*
+CE RF current,0x2052,2,1000,*00.000Ap-p,B,0,65535,R,,Actual current through the coil at RF,1,6,,,*
+Elec. current estim.,0x2054,2,1000,*0.000mA,B,0,65535,R,,Electrode current set,1,6,,,*
+Estim factor,0x1014,2,100,*0.00,B,0,10000,RW,,Factor of current estimation,1,6,,,*
+CE frequency,0x2056,2,1000,*0.000MHz,B,0,65535,R,,,1,6,,,*
+,,,,,,,,,,,1,,,,*
+/_Ramping,,,,,,,,,,,1,,,,*
+Ramping Enable,0x2093,1,1,,B,0,1,RW,,Set to 1 to enable  current ramping.,1,5,,,*
+Level ramping,0x1060,1,1,*0\%/sec,B,1,100,RW,,Range is 1% to 100%,1,1,,,*
+Ramped current,0x2094,2,1000,*0.000mA,B,0,65535,R,,Actual current during ramping,1,6,,,*
+/N,,,,,,,,,,,1,,,,*
+/_Feedback control,,,,,,,,,,,1,,,,*
+Position quality min.,0x1068,1,1,*0\%,B,0,80,RW,,Below this level - No feedback alert. Range 0 to 80,1,8,,,*
+Max FB wait time,0x1020,2,1,*0sec,B,1,3600,RW,,Range 1 to 3600. Maximum wait time during session in case of FB loss.,1,8,,,*
+Averaging,0x2080,1,1,,B,0,128,RW,,Number of frames 1-128,1,8,,,*
+Blank time,0x1010,2,1,*0us,B,0,2000,RW,32,Range 0-2000. Early time of the pulse that is not processed due to large noises,1,8,,,*
+Processing time,0x1012,2,1,*0us,B,1,2000,RW,33,Range 1-2000. Processed feedback time just after the blank time,1,8,,,*
+Blank time 2,0x101C,2,1,*0us,B,0,2000,RW,,Range 0-2000. Start of processing time for second FB window,1,8,,,*
+Processing time 2,0x101E,2,1,*0us,B,1,2000,RW,,Range 1-2000. Processed feedback time for second window.,1,8,,,*
+Sensitivity,0x2048,1,1,,B,0,2,RW,,0=Low sensitivity 1=High sensitivity 2=Auto,1,8,,,*
+,,,,,,,,,,,1,,,,*
+/_Feedback status,,,,,,,,,,,1,,,,*
+Feedback status,0x2059,1,1,,B,0,255,R,20,0=Tx_off  1=FB_none   2=FB_low  3=FB_good   4=Tx_disconnected  5=Tx_short,1,9,,S;0;Receiver is off;1;No feedback detected;2;Voltage is below threshold;3;Feedback threshold detected;4;Voltage is above threshold;5;Transmitter disconnected;6;Transmitter short-circuited,*
+FB wait timer,0x2026,2,1,*0sec,B,1,3600,R,,FB wait timer in case of FB loss.,1,9,,,*
+Implant side detect,0x202C,1,1,,B,0,255,R,,Detected implant side. 0=Left  1=Right  2=Not defined,1,9,,,*
+Position quality,0x2014,1,1,*0\%,B,0,255,R,36,Range 0 to 100. 100=Best position,1,9,,,*
+Position stability,0x2015,1,1,*0\%,B,0,255,R,,Range 0 to 100. 100=Fully sable,1,9,,,*
+Unfiltered fb.,0x2010,2,1,*00000rms,B,0,65535,R,28,Implant feedback at the amplifier input,1,9,,,*
+Filtered fb.,0x2012,2,1,*00000rms,B,0,65535,R,25,Implant feedback at the amplifier input after frame averaging,1,9,,,*
+Unfiltered fb. 2,0x2016,2,1,*00000rms,B,0,65535,R,,Implant feedback at the amplifier input,1,9,,,*
+Filtered fb. 2,0x2018,2,1,*00000rms,B,0,65535,R,,Implant feedback at the amplifier input after frame averaging,1,9,,,*
+FB frequency 1,0x205F,2,10,*0.00KHz,B,0,65535,R,,Feedback frequency from the implant oscillator,1,9,,,*
+FB frequency 2,0x2030,2,10,*0.00KHz,B,0,65535,R,,Feedback frequency from the implant oscillator,1,9,,,*
+Amplifier DC lvl.,0x205D,2,1000,*00.000V,B,0,65535,R,,Feedback amplifier DC level. Typically 1.00V,1,9,,,*
+,,,,,,,,,,,1,,,,*
+/_Pulse data timing,,,,,,,,,,,1,,,,*
+Power up time,0x1064,1,1,*0us,B,0,255,RW,,Transmission time to initial charge of the implant circuit,1,7,,,*
+Data content,0x2058,1,1,,B,0,255,RW,,0=Monitor ; 1=L-Ring ; 2=R-Ring ; 4=L-cuff ; 8=R-cuff,1,7,,,*
+Bit to bit time A,0x1065,1,1,*0us,B,0,255,RW,,Delay between bits (Tx is On),1,7,,,*
+Bit to bit time B,0x106A,1,1,*0us,B,0,255,RW,,Delay before last bit (Tx is On),1,7,,,*
+Actual BtB time B,0x205A,1,1,*0us,B,0,255,R,,Actual last bit to bit delay after low level compensation,1,7,,,*
+Data bit 0 time,0x1066,1,1,*0us,B,0,255,RW,,Delay for '1' bit (Tx is Off),1,7,,,*
+Data bit 1 time,0x1067,1,1,*0us,B,0,255,RW,,Delay for '0' bit (Tx is On),1,7,,,*
+/N,,,,,,,,,,,1,,,,*
+/_Debug registers,,,,,,,,,,,1,,,,*
+Debug 0,0x2064,2,1,,B,0,65535,RW,,Debugging data,1,11,,,*
+Debug 1,0x2066,2,1,,B,0,65535,RW,,Debugging data,1,11,,,*
+Debug 2,0x2068,2,1,,B,0,65535,RW,,Debugging data,1,11,,,*
+LED - bar 1,0x206A,1,1,,B,0,3,RW,,0=off 1=Green 2=Red 3=Orange,1,11,,,*
+LED - bar 2,0x206B,1,1,,B,0,3,RW,,0=off 1=Green 2=Red 3=Orange,1,11,,,*
+LED - bar 3,0x206C,1,1,,B,0,3,RW,,0=off 1=Green 2=Red 3=Orange,1,11,,,*
+LED - bar 4,0x206D,1,1,,B,0,3,RW,,0=off 1=Green 2=Red 3=Orange,1,11,,,*
+LED - bar 5,0x206E,1,1,,B,0,3,RW,,0=off 1=Green 2=Red 3=Orange,1,11,,,*
+LED - bar 6,0x206F,1,1,,B,0,3,RW,,0=off 1=Green 2=Red 3=Orange,1,11,,,*
+LED - bar 7,0x2070,1,1,,B,0,3,RW,,0=off 1=Green 2=Red 3=Orange,1,11,,,*
+LED - Status 1,0x2071,1,1,,B,0,3,RW,,0=off 1=Green 2=Red 3=Orange,1,11,,,*
+LED - Status 2,0x2072,1,1,,B,0,3,RW,,0=off 1=Green 2=Red 3=Orange,1,11,,,*
+Buzzer tone,0x2075,2,1,*0Hz,B,0,65535,RW,,Buzzer tone,1,11,,,*
+Buzzer pattern,0x2073,1,1,,B,0,255,RW,,Timing pattern. Bit wise AND with internal counter. Try 1/2/3/4/8 and other combinations.,1,11,,,*
+Number of beeps,0x2074,1,1,,B,0,255,RW,,Number of beeps 0-255 255=Infinite,1,11,,,*
+Kaypad status,0x2063,1,1,,B,0,255,R,,Bit0=ON/OFF Bit1=Control_A Bit2=Control_B,1,11,,,*
+,,,,,,,,,,,1,,,,*
+/_Blue tooth settings,,,,,,,,,,,1,,,,*
+BT Status,0x106C,1,1,,B,0,255,RW,,0=Not responding 1=reset 2=Configured OK. Set to 0 for Bluetooth reset.,1,10,,,*
+Local name,0x20B8,16,1,,A,0,255,RW,11,Up to 16 characters,1,10,,,*
+PIN (8 digits),0x20B0,8,1,,A,0,255,RW,12,Enter 8 digits,1,10,,,*
+Local address,0x20C8,6,1,,H,0,255,R,,General blue tooth information,1,10,,,*
+Paired device 1,0x20CE,6,1,,H,0,255,R,,This field is updated only after reset,1,10,,,*
+Paired device 2,0x20D4,6,1,,H,0,255,R,,This field is updated only after reset,1,10,,,*
+Paired device 3,0x20DA,6,1,,H,0,255,R,,This field is updated only after reset,1,10,,,*
+BT Power mode,0x1058,1,1,,B,0,2,RW,,0=Always off  1=Always on  2=Sniff mode,1,10,,,*
+Sniff on time,0x1016,2,1,*0sec,B,1,3600,RW,,Range is 1 to 3600 seconds,1,10,,,*
+Sniff cycle time,0x1018,2,1,*0sec,B,1,60000,RW,,Range is 1 to 60000 seconds,1,10,,,*
+Sniff cycle timer,0x2098,2,1,*0sec,B,1,60000,RW,,Range is 1 to 60000 seconds. Counts time without BT communication,1,10,,,*
+Max intrruption,0x101A,2,1,*0sec,B,1,60000,RW,,Range is 1 to 60000 seconds. A longer BT interruption time will allow sleep mode entry,1,10,,,*
+Intrruption timer,0x208E,2,1,*0sec,B,1,60000,RW,,Range is 1 to 60000 seconds. Counts time without BT communication,1,10,,,*
+,,,,,,,,,,,,,,,
+Not is use. space saving,0x2000,2,1,,B,0,65536,R,,1,,,,,*
+Not is use. space saving,0x2001,3,2,,B,1,65537,R,,2,,,,,*
+Not is use. space saving,0x2002,4,3,,B,2,65538,R,,3,,,,,*
+Not is use. space saving,0x2003,5,4,,B,3,65539,R,,4,,,,,*
+Not is use. space saving,0x2004,6,5,,B,4,65540,R,,5,,,,,*
+Not is use. space saving,0x2005,7,6,,B,5,65541,R,,6,,,,,*
+Not is use. space saving,0x2006,8,7,,B,6,65542,R,,7,,,,,*
+Not is use. space saving,0x2007,9,8,,B,7,65543,R,,8,,,,,*
+Not is use. space saving,0x2008,10,9,,B,8,65544,R,9,9,,,,,*
+Not is use. space saving,0x2009,11,10,,B,9,65545,R,10,10,,,,,*
+Not is use. space saving,0x2010,12,11,,B,10,65546,R,,11,,,,,*
+Not is use. space saving,0x2011,13,12,,B,11,65547,R,,12,,,,,*
+Not is use. space saving,0x2012,14,13,,B,12,65548,R,,13,,,,,*
+Not is use. space saving,0x2013,15,14,,B,13,65549,R,14,14,,,,,*
+Not is use. space saving,0x2014,16,15,,B,14,65550,R,,15,,,,,*
+Not is use. space saving,0x2015,17,16,,B,15,65551,R,,16,,,,,*
+Not is use. space saving,0x2016,18,17,,B,16,65552,R,,17,,,,,*
+Not is use. space saving,0x2017,19,18,,B,17,65553,R,,18,,,,,*
+Not is use. space saving,0x2018,20,19,,B,18,65554,R,19,19,,,,,*
+Not is use. space saving,0x2019,21,20,,B,19,65555,R,,20,,,,,*
+Not is use. space saving,0x2020,22,21,,B,20,65556,R,,21,,,,,*
+Not is use. space saving,0x2021,23,22,,B,21,65557,R,,22,,,,,*
+Not is use. space saving,0x2022,24,23,,B,22,65558,R,23,23,,,,,*
+Not is use. space saving,0x2023,25,24,,B,23,65559,R,24,24,,,,,*
+Not is use. space saving,0x2024,26,25,,B,24,65560,R,,25,,,,,*
+Not is use. space saving,0x2025,27,26,,B,25,65561,R,,26,,,,,*
+Not is use. space saving,0x2026,28,27,,B,26,65562,R,27,27,,,,,*
+Not is use. space saving,0x2027,29,28,,B,27,65563,R,,28,,,,,*
+Not is use. space saving,0x2028,30,29,,B,28,65564,R,29,29,,,,,*
+Not is use. space saving,0x2029,31,30,,B,29,65565,R,30,30,,,,,*
+Not is use. space saving,0x2030,32,31,,B,30,65566,R,,31,,,,,*
+Not is use. space saving,0x2031,33,32,,B,31,65567,R,,32,,,,,*
+Not is use. space saving,0x2032,34,33,,B,32,65568,R,,33,,,,,*
+Not is use. space saving,0x2033,35,34,,B,33,65569,R,,34,,,,,*
+Not is use. space saving,0x2034,36,35,,B,34,65570,R,,35,,,,,*
+Not is use. space saving,0x2035,37,36,,B,35,65571,R,,36,,,,,*
+Not is use. space saving,0x2036,38,37,,B,36,65572,R,,37,,,,,*
+Not is use. space saving,0x2037,39,38,,B,37,65573,R,38,38,,,,,*
+Not is use. space saving,0x2038,40,39,,B,38,65574,R,39,39,,,,,*
+Not is use. space saving,0x2039,41,40,,B,39,65575,R,40,40,,,,,*
+Not is use. space saving,0x2040,42,41,,B,40,65576,R,41,41,,,,,*
+Not is use. space saving,0x2041,43,42,,B,41,65577,R,42,42,,,,,*
+Not is use. space saving,0x2042,44,43,,B,42,65578,R,43,43,,,,,*
+Not is use. space saving,0x2043,45,44,,B,43,65579,R,44,44,,,,,*
+Not is use. space saving,0x2044,46,45,,B,44,65580,R,45,45,,,,,*
+Not is use. space saving,0x2045,47,46,,B,45,65581,R,46,46,,,,,*
+Not is use. space saving,0x2046,48,47,,B,46,65582,R,47,47,,,,,*
+Not is use. space saving,0x2047,49,48,,B,47,65583,R,48,48,,,,,*
+Not is use. space saving,0x2048,50,49,,B,48,65584,R,49,49,,,,,*
+Not is use. space saving,0x2049,51,50,,B,49,65585,R,50,50,,,,,*
+Not is use. space saving,0x2050,52,51,,B,50,65586,R,51,51,,,,,*
+Not is use. space saving,0x2051,53,52,,B,51,65587,R,52,52,,,,,*
+Not is use. space saving,0x2052,54,53,,B,52,65588,R,53,53,,,,,*
+Not is use. space saving,0x2053,55,54,,B,53,65589,R,54,54,,,,,*
+Not is use. space saving,0x2054,56,55,,B,54,65590,R,,55,,,,,*
+Not is use. space saving,0x2055,57,56,,B,55,65591,R,56,56,,,,,*
+Not is use. space saving,0x2056,58,57,,B,56,65592,R,57,57,,,,,*
+Not is use. space saving,0x2057,59,58,,B,57,65593,R,58,58,,,,,*
+Not is use. space saving,0x2058,60,59,,B,58,65594,R,59,59,,,,,*
+Not is use. space saving,0x2059,61,60,,B,59,65595,R,,60,,,,,*
+Not is use. space saving,0x2060,62,61,,B,60,65596,R,61,61,,,,,*
+Not is use. space saving,0x2061,63,62,,B,61,65597,R,62,62,,,,,*
+Not is use. space saving,0x2062,64,63,,B,62,65598,R,63,63,,,,,*
+Not is use. space saving,0x2063,65,64,,B,63,65599,R,64,64,,,,,*
+Not is use. space saving,0x2064,66,65,,B,64,65600,R,65,65,,,,,*
+Not is use. space saving,0x2065,67,66,,B,65,65601,R,66,66,,,,,*
+Not is use. space saving,0x2066,68,67,,B,66,65602,R,67,67,,,,,*
+Not is use. space saving,0x2067,69,68,,B,67,65603,R,,68,,,,,*
+Not is use. space saving,0x2068,70,69,,B,68,65604,R,69,69,,,,,*

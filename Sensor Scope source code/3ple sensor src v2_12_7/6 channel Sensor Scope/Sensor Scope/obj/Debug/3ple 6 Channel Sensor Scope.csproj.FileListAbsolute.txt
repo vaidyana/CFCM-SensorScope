@@ -1,0 +1,10 @@
+C:\Users\mp\Documents\Active Projects\EarlySense\Triple Sensor scope\6 channel Sensor Scope\Sensor Scope\bin\Debug\6 ch Sensor Scope.exe.config
+C:\Users\mp\Documents\Active Projects\EarlySense\Triple Sensor scope\6 channel Sensor Scope\Sensor Scope\bin\Debug\6 ch Sensor Scope.exe
+C:\Users\mp\Documents\Active Projects\EarlySense\Triple Sensor scope\6 channel Sensor Scope\Sensor Scope\bin\Debug\6 ch Sensor Scope.pdb
+C:\Users\mp\Documents\Active Projects\EarlySense\Triple Sensor scope\6 channel Sensor Scope\Sensor Scope\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\mp\Documents\Active Projects\EarlySense\Triple Sensor scope\6 channel Sensor Scope\Sensor Scope\obj\Debug\Sensor_Scope.FRMMain.resources
+C:\Users\mp\Documents\Active Projects\EarlySense\Triple Sensor scope\6 channel Sensor Scope\Sensor Scope\obj\Debug\Sensor_Scope.Properties.Resources.resources
+C:\Users\mp\Documents\Active Projects\EarlySense\Triple Sensor scope\6 channel Sensor Scope\Sensor Scope\obj\Debug\GenerateResource-ResGen.read.1.tlog
+C:\Users\mp\Documents\Active Projects\EarlySense\Triple Sensor scope\6 channel Sensor Scope\Sensor Scope\obj\Debug\GenerateResource-ResGen.write.1.tlog
+C:\Users\mp\Documents\Active Projects\EarlySense\Triple Sensor scope\6 channel Sensor Scope\Sensor Scope\obj\Debug\6 ch Sensor Scope.exe
+C:\Users\mp\Documents\Active Projects\EarlySense\Triple Sensor scope\6 channel Sensor Scope\Sensor Scope\obj\Debug\6 ch Sensor Scope.pdb

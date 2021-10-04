@@ -1,0 +1,19 @@
+C:\Documents and Settings\MP\My Documents\Active Projects\EarlySense\Sensor scope\6 channel Sensor Scope\Sensor Scope\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\MP\My Documents\Active Projects\EarlySense\Sensor scope\6 channel Sensor Scope\Sensor Scope\obj\Release\Sensor_Scope.FRMMain.resources
+C:\Documents and Settings\MP\My Documents\Active Projects\EarlySense\Sensor scope\6 channel Sensor Scope\Sensor Scope\obj\Release\Sensor_Scope.Properties.Resources.resources
+C:\Documents and Settings\MP\My Documents\Active Projects\EarlySense\Sensor scope\6 channel Sensor Scope\Sensor Scope\obj\Release\6 Channel Sensor Scope.csproj.GenerateResource.Cache
+C:\Documents and Settings\MP\My Documents\Active Projects\EarlySense\Sensor scope\6 channel Sensor Scope\Sensor Scope\bin\Release\6 ch Sensor Scope.exe.config
+C:\Documents and Settings\MP\My Documents\Active Projects\EarlySense\Sensor scope\6 channel Sensor Scope\Sensor Scope\bin\Release\6 ch Sensor Scope.exe
+C:\Documents and Settings\MP\My Documents\Active Projects\EarlySense\Sensor scope\6 channel Sensor Scope\Sensor Scope\bin\Release\6 ch Sensor Scope.pdb
+C:\Documents and Settings\MP\My Documents\Active Projects\EarlySense\Sensor scope\6 channel Sensor Scope\Sensor Scope\obj\Release\6 ch Sensor Scope.exe
+C:\Documents and Settings\MP\My Documents\Active Projects\EarlySense\Sensor scope\6 channel Sensor Scope\Sensor Scope\obj\Release\6 ch Sensor Scope.pdb
+C:\Users\mp\Documents\Active Projects\EarlySense\Sensor scope\6 channel Sensor Scope\Sensor Scope\bin\Release\6 ch Sensor Scope.exe.config
+C:\Users\mp\Documents\Active Projects\EarlySense\Sensor scope\6 channel Sensor Scope\Sensor Scope\obj\Release\6 ch Sensor Scope.exe
+C:\Users\mp\Documents\Active Projects\EarlySense\Sensor scope\6 channel Sensor Scope\Sensor Scope\obj\Release\6 ch Sensor Scope.pdb
+C:\Users\mp\Documents\Active Projects\EarlySense\Sensor scope\6 channel Sensor Scope\Sensor Scope\obj\Release\ResolveAssemblyReference.cache
+C:\Users\mp\Documents\Active Projects\EarlySense\Sensor scope\6 channel Sensor Scope\Sensor Scope\obj\Release\Sensor_Scope.FRMMain.resources
+C:\Users\mp\Documents\Active Projects\EarlySense\Sensor scope\6 channel Sensor Scope\Sensor Scope\obj\Release\Sensor_Scope.Properties.Resources.resources
+C:\Users\mp\Documents\Active Projects\EarlySense\Sensor scope\6 channel Sensor Scope\Sensor Scope\obj\Release\GenerateResource-ResGen.read.1.tlog
+C:\Users\mp\Documents\Active Projects\EarlySense\Sensor scope\6 channel Sensor Scope\Sensor Scope\obj\Release\GenerateResource-ResGen.write.1.tlog
+C:\Users\mp\Documents\Active Projects\EarlySense\Sensor scope\6 channel Sensor Scope\Sensor Scope\bin\Release\6 ch Sensor Scope.exe
+C:\Users\mp\Documents\Active Projects\EarlySense\Sensor scope\6 channel Sensor Scope\Sensor Scope\bin\Release\6 ch Sensor Scope.pdb

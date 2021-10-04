@@ -1,0 +1,23 @@
+C:\Users\mp\Documents\Active Projects\EarlySense\Triple Sensor scope\s-n sensor scope\Sensor Scope\bin\x86\Debug\S-N Sensor Scope.exe.config
+C:\Users\mp\Documents\Active Projects\EarlySense\Triple Sensor scope\s-n sensor scope\Sensor Scope\obj\x86\Debug\Sensor_Scope.FRMMain.resources
+C:\Users\mp\Documents\Active Projects\EarlySense\Triple Sensor scope\s-n sensor scope\Sensor Scope\obj\x86\Debug\Sensor_Scope.Properties.Resources.resources
+C:\Users\mp\Documents\Active Projects\EarlySense\Triple Sensor scope\s-n sensor scope\Sensor Scope\bin\x86\Debug\S-N Sensor Scope.exe
+C:\Users\mp\Documents\Active Projects\EarlySense\Triple Sensor scope\s-n sensor scope\Sensor Scope\bin\x86\Debug\S-N Sensor Scope.pdb
+C:\Users\mp\Documents\Active Projects\EarlySense\Triple Sensor scope\s-n sensor scope\Sensor Scope\obj\x86\Debug\S-N Sensor Scope.exe
+C:\Users\mp\Documents\Active Projects\EarlySense\Triple Sensor scope\s-n sensor scope\Sensor Scope\obj\x86\Debug\S-N Sensor Scope.pdb
+C:\Users\mp\Documents\Active Projects\EarlySense\Triple Sensor scope\s-n sensor scope\Sensor Scope\obj\x86\Debug\3ple S-N Sensor Scope.csproj.GenerateResource.Cache
+C:\Users\mp\Documents\Active Projects\EarlySense\Triple Sensor scope\s-n sensor scope\Sensor Scope\obj\x86\Debug\Sensor_Scope.frmCalibSettings.resources
+C:\Users\mp\Documents\Active Projects\EarlySense\Triple Sensor scope from  2-12 and up\s-n sensor scope\Sensor Scope\bin\x86\Debug\S-N Sensor Scope.exe.config
+C:\Users\mp\Documents\Active Projects\EarlySense\Triple Sensor scope from  2-12 and up\s-n sensor scope\Sensor Scope\obj\x86\Debug\S-N Sensor Scope.exe
+C:\Users\mp\Documents\Active Projects\EarlySense\Triple Sensor scope from  2-12 and up\s-n sensor scope\Sensor Scope\obj\x86\Debug\S-N Sensor Scope.pdb
+C:\Users\mp\Documents\Active Projects\EarlySense\Triple Sensor scope from  2-12 and up\s-n sensor scope\Sensor Scope\bin\x86\Debug\S-N Sensor Scope.exe
+C:\Users\mp\Documents\Active Projects\EarlySense\Triple Sensor scope from  2-12 and up\s-n sensor scope\Sensor Scope\bin\x86\Debug\S-N Sensor Scope.pdb
+C:\Users\mp\Documents\Active Projects\EarlySense\Triple Sensor scope from  2-12 and up\s-n sensor scope\Sensor Scope\obj\x86\Debug\3ple S-N Sensor Scope.csprojResolveAssemblyReference.cache
+C:\Users\mp\Documents\Active Projects\EarlySense\Triple Sensor scope from  2-12 and up\s-n sensor scope\Sensor Scope\obj\x86\Debug\Sensor_Scope.frmCalibSettings.resources
+C:\Users\mp\Documents\Active Projects\EarlySense\Triple Sensor scope from  2-12 and up\s-n sensor scope\Sensor Scope\obj\x86\Debug\Sensor_Scope.FRMMain.resources
+C:\Users\mp\Documents\Active Projects\EarlySense\Triple Sensor scope from  2-12 and up\s-n sensor scope\Sensor Scope\obj\x86\Debug\Sensor_Scope.Properties.Resources.resources
+C:\Users\mp\Documents\Active Projects\EarlySense\Triple Sensor scope from  2-12 and up\s-n sensor scope\Sensor Scope\obj\x86\Debug\3ple S-N Sensor Scope.csproj.GenerateResource.Cache
+C:\Users\mp\Documents\Active Projects\EarlySense\Triple Sensor scope from  2-12 and up\s-n sensor scope\Sensor Scope\bin\x86\Debug\MigraDoc.DocumentObjectModel.dll
+C:\Users\mp\Documents\Active Projects\EarlySense\Triple Sensor scope from  2-12 and up\s-n sensor scope\Sensor Scope\bin\x86\Debug\MigraDoc.Rendering.dll
+C:\Users\mp\Documents\Active Projects\EarlySense\Triple Sensor scope from  2-12 and up\s-n sensor scope\Sensor Scope\bin\x86\Debug\PdfSharp.Charting.dll
+C:\Users\mp\Documents\Active Projects\EarlySense\Triple Sensor scope from  2-12 and up\s-n sensor scope\Sensor Scope\bin\x86\Debug\PdfSharp.dll

@@ -1,0 +1,7 @@
+1.	3ple sensor src v2_12_7 – is the production line version of the sensor scope 
+2.	s-n sensor scope V2-16-02 – R&D version which allows changes of the tester's firmware using ctrl+shift+E (part of the DOP-460 DSTE V2 Pressure sensor alignment procedure) 
+
+Some instructions from the subcontractor that designed the software for us: 
+The software was written in C#. 
+To make changes you should open the "3ple Sensor Scope.sln" file with the MS Visual Studio environment. 
+The environment includes two projects: the software itself and setup project. 

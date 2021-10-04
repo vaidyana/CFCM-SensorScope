@@ -1,0 +1,12 @@
+C:\Documents and Settings\MP\My Documents\Active Projects\EarlySense\Sensor Scope\Sensor Scope\bin\Debug\Sensor Scope.exe.config
+C:\Documents and Settings\MP\My Documents\Active Projects\EarlySense\Sensor Scope\Sensor Scope\obj\Debug\Sensor Scope.exe
+C:\Documents and Settings\MP\My Documents\Active Projects\EarlySense\Sensor Scope\Sensor Scope\obj\Debug\Sensor Scope.pdb
+C:\Documents and Settings\MP\My Documents\Active Projects\EarlySense\Sensor Scope\Sensor Scope\bin\Debug\Sensor Scope.exe
+C:\Documents and Settings\MP\My Documents\Active Projects\EarlySense\Sensor Scope\Sensor Scope\bin\Debug\Sensor Scope.pdb
+C:\Documents and Settings\MP\My Documents\Active Projects\EarlySense\Sensor Scope\Sensor Scope\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\MP\My Documents\Active Projects\EarlySense\Sensor Scope\Sensor Scope\obj\Debug\Sensor_Scope.FRMMain.resources
+C:\Documents and Settings\MP\My Documents\Active Projects\EarlySense\Sensor Scope\Sensor Scope\obj\Debug\Sensor_Scope.Properties.Resources.resources
+C:\Documents and Settings\MP\My Documents\Active Projects\EarlySense\Sensor Scope\Sensor Scope\obj\Debug\Sensor Scope.csproj.GenerateResource.Cache
+C:\Documents and Settings\MP\My Documents\Active Projects\EarlySense\Sensor scope\Sensor Scope 6\Sensor Scope\bin\Debug\Sensor Scope.exe.config
+C:\Documents and Settings\MP\My Documents\Active Projects\EarlySense\Sensor scope\Sensor Scope 6\Sensor Scope\obj\Debug\Sensor Scope.exe
+C:\Documents and Settings\MP\My Documents\Active Projects\EarlySense\Sensor scope\Sensor Scope 6\Sensor Scope\obj\Debug\Sensor Scope.pdb

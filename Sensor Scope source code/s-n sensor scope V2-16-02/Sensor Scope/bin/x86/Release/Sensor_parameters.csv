@@ -1,0 +1,8 @@
+;Date,Pc version,Sensor version,,,,,,,,,,,,,
+;,1,1,,,,,,,,,,,,,
+;Download parameters,,,,,,,,,,,,,,,*
+Download mode,0x029A,1,1,,B,0,255,RW,1,,,,,,*
+Page MSB,0x029E,1,1,,B,0,255,RW,2,,,,,,*
+Page LSB,0x029D,1,1,,B,0,255,RW,3,,,,,,*
+Page checksum,0x029B,1,1,,B,0,255,RW,4,,,,,,*
+Page pos checksum,0x029C,1,1,,B,0,255,RW,,,,,,,*

@@ -1,0 +1,10 @@
+C:\Users\mp\Documents\Active Projects\EarlySense\Triple Sensor scope\Sensor Scope 2 ch - xyz\Sensor Scope\bin\Debug\rev5-4 Sensor Scope XYZ.exe.config
+C:\Users\mp\Documents\Active Projects\EarlySense\Triple Sensor scope\Sensor Scope 2 ch - xyz\Sensor Scope\bin\Debug\rev5-4 Sensor Scope XYZ.exe
+C:\Users\mp\Documents\Active Projects\EarlySense\Triple Sensor scope\Sensor Scope 2 ch - xyz\Sensor Scope\bin\Debug\rev5-4 Sensor Scope XYZ.pdb
+C:\Users\mp\Documents\Active Projects\EarlySense\Triple Sensor scope\Sensor Scope 2 ch - xyz\Sensor Scope\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\mp\Documents\Active Projects\EarlySense\Triple Sensor scope\Sensor Scope 2 ch - xyz\Sensor Scope\obj\Debug\Sensor_Scope.FRMMain.resources
+C:\Users\mp\Documents\Active Projects\EarlySense\Triple Sensor scope\Sensor Scope 2 ch - xyz\Sensor Scope\obj\Debug\Sensor_Scope.Properties.Resources.resources
+C:\Users\mp\Documents\Active Projects\EarlySense\Triple Sensor scope\Sensor Scope 2 ch - xyz\Sensor Scope\obj\Debug\GenerateResource-ResGen.read.1.tlog
+C:\Users\mp\Documents\Active Projects\EarlySense\Triple Sensor scope\Sensor Scope 2 ch - xyz\Sensor Scope\obj\Debug\GenerateResource-ResGen.write.1.tlog
+C:\Users\mp\Documents\Active Projects\EarlySense\Triple Sensor scope\Sensor Scope 2 ch - xyz\Sensor Scope\obj\Debug\rev5-4 Sensor Scope XYZ.exe
+C:\Users\mp\Documents\Active Projects\EarlySense\Triple Sensor scope\Sensor Scope 2 ch - xyz\Sensor Scope\obj\Debug\rev5-4 Sensor Scope XYZ.pdb
